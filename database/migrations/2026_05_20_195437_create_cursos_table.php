@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('codigo_curso', 50)->unique();
             $table->integer('creditos');
             $table->string('descripcion')->nullable();
+            $table->string('foto')->nullable();
 
 
             $table->timestamps();

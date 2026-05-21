@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Alumno extends Model
 {
     use HasFactory;
+    // pongo protect table porque laravel espera el nombre en plural pero la tabla esta en singular
 
     protected $table = 'alumno'; 
 

@@ -1,8 +1,10 @@
 <?php
 namespace App\Http\Controllers\Api;
+
 use App\Http\Controllers\Controller;
 use App\Models\Alumno;
 use Illuminate\Http\Request;
+
 class AlumnoController extends Controller
 {
 // Método para devolver todos los alumnos (Petición GET)
@@ -27,6 +29,7 @@ public function store(Request $request)
     ]);
 
     if ($request->hasFile('foto') && $request->file('foto')->isValid()) {
+        
         $ruta = $request->file('foto')->store('alumnos', 'public');
         $validated['foto'] = $ruta;
     }
